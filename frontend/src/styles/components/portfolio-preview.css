@@ -1,0 +1,347 @@
+/* ============================================================
+   SECTION
+   ============================================================ */
+
+.portfolio-preview {
+  position: relative;
+
+  background:
+    linear-gradient(
+      180deg,
+      #121212 0%,
+      #181818 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   BACKGROUND GLOW
+   ============================================================ */
+
+.portfolio-preview::before {
+  content: "";
+
+  position: absolute;
+
+  top: -15%;
+  right: -10%;
+
+  width: 520px;
+  height: 520px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201,168,76,0.08),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.portfolio-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap:
+    clamp(24px, 3vw, 36px);
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.portfolio-card {
+  position: relative;
+
+  background:
+    linear-gradient(
+      180deg,
+      #1A1A1A 0%,
+      #161616 100%
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.05);
+
+  border-radius:
+    var(--radius-xl);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+}
+
+
+/* ============================================================
+   HOVER
+   ============================================================ */
+
+.portfolio-card:hover {
+  transform:
+    translateY(-10px);
+
+  border-color:
+    rgba(201,168,76,0.25);
+
+  box-shadow:
+    0 24px 60px rgba(0,0,0,0.35);
+}
+
+
+/* ============================================================
+   IMAGE WRAP
+   ============================================================ */
+
+.portfolio-card__image-wrap {
+  position: relative;
+
+  height: 340px;
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   IMAGE
+   ============================================================ */
+
+.portfolio-card__image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s cubic-bezier(0.16,1,0.3,1);
+}
+
+.portfolio-card:hover
+.portfolio-card__image {
+  transform:
+    scale(1.08);
+}
+
+
+/* ============================================================
+   OVERLAY
+   ============================================================ */
+
+.portfolio-card__overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(13,13,13,0.1) 0%,
+      rgba(13,13,13,0.75) 100%
+    );
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.portfolio-card__content {
+  padding:
+    32px 28px;
+}
+
+
+/* ============================================================
+   CATEGORY
+   ============================================================ */
+
+.portfolio-card__category {
+  margin-bottom: 16px;
+
+  color:
+    var(--gold);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.portfolio-card__title {
+  margin-bottom: 16px;
+
+  color:
+    var(--warm-white);
+
+  line-height: 1.15;
+}
+
+
+/* ============================================================
+   DESCRIPTION
+   ============================================================ */
+
+.portfolio-card__description {
+  color:
+    rgba(250,248,245,0.65);
+
+  line-height: 1.8;
+
+  font-size: 0.95rem;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.portfolio-card__footer {
+  margin-top: 28px;
+}
+
+
+/* ============================================================
+   BUTTON
+   ============================================================ */
+
+.portfolio-card__button {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color:
+    var(--warm-white);
+
+  font-size: 0.88rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    color 0.35s ease;
+}
+
+.portfolio-card__button::after {
+  content: "→";
+
+  transition:
+    transform 0.35s ease;
+}
+
+.portfolio-card__button:hover {
+  color:
+    var(--gold);
+}
+
+.portfolio-card__button:hover::after {
+  transform:
+    translateX(5px);
+}
+
+
+/* ============================================================
+   CTA
+   ============================================================ */
+
+.portfolio-preview__cta {
+  display: flex;
+  justify-content: center;
+
+  margin-top:
+    clamp(54px, 7vw, 82px);
+}
+
+
+/* ============================================================
+   SKELETON
+   ============================================================ */
+
+.portfolio-skeleton {
+  height: 520px;
+
+  border-radius:
+    var(--radius-xl);
+}
+
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+
+.portfolio-error {
+  text-align: center;
+}
+
+.portfolio-error h3 {
+  color:
+    var(--warm-white);
+}
+
+.portfolio-error p {
+  margin-top: 14px;
+
+  color:
+    rgba(250,248,245,0.65);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-card__image-wrap {
+    height: 280px;
+  }
+
+  .portfolio-card__content {
+    padding:
+      28px 24px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .portfolio-card__image-wrap {
+    height: 240px;
+  }
+
+  .portfolio-card__title {
+    font-size: 1.45rem;
+  }
+
+  .portfolio-card__description {
+    font-size: 0.9rem;
+  }
+}

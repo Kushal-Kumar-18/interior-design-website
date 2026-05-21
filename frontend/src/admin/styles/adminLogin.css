@@ -1,0 +1,291 @@
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.admin-login {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding:
+    40px 20px;
+
+  background:
+    #090909;
+}
+
+
+/* ============================================================
+   BACKGROUND
+   ============================================================ */
+
+.admin-login__bg {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(201,168,76,0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(201,168,76,0.08),
+      transparent 25%
+    );
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.admin-login__card {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 520px;
+
+  padding:
+    48px;
+
+  border-radius:
+    30px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  backdrop-filter:
+    blur(16px);
+
+  box-shadow:
+    0 24px 70px rgba(0,0,0,0.35);
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.admin-login__header {
+  margin-bottom: 40px;
+
+  text-align: center;
+}
+
+.admin-login__header span {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color:
+    var(--primary-gold);
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  font-size:
+    0.82rem;
+}
+
+.admin-login__header h1 {
+  margin-bottom: 16px;
+
+  font-size:
+    2.5rem;
+
+  color:
+    var(--warm-white);
+}
+
+.admin-login__header p {
+  line-height: 1.8;
+
+  color:
+    rgba(255,255,255,0.62);
+}
+
+
+/* ============================================================
+   FORM
+   ============================================================ */
+
+.admin-login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+/* ============================================================
+   FIELD
+   ============================================================ */
+
+.admin-login__field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-login__field label {
+  color:
+    rgba(255,255,255,0.74);
+
+  font-size:
+    0.95rem;
+}
+
+
+/* ============================================================
+   INPUT
+   ============================================================ */
+
+.admin-login__input {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding:
+    16px 18px;
+
+  border-radius:
+    18px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  transition:
+    all 0.35s ease;
+}
+
+.admin-login__input:focus-within {
+  border-color:
+    rgba(201,168,76,0.3);
+
+  box-shadow:
+    0 0 0 4px rgba(201,168,76,0.08);
+}
+
+.admin-login__input svg {
+  color:
+    rgba(255,255,255,0.55);
+
+  font-size:
+    1rem;
+}
+
+.admin-login__input input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color:
+    white;
+}
+
+.admin-login__input input::placeholder {
+  color:
+    rgba(255,255,255,0.42);
+}
+
+
+/* ============================================================
+   PASSWORD TOGGLE
+   ============================================================ */
+
+.password-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  color:
+    rgba(255,255,255,0.55);
+
+  cursor: pointer;
+}
+
+
+/* ============================================================
+   BUTTON
+   ============================================================ */
+
+.admin-login__btn {
+  margin-top: 10px;
+
+  padding:
+    18px;
+
+  border: none;
+
+  border-radius:
+    18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(201,168,76,1),
+      rgba(176,145,60,1)
+    );
+
+  color:
+    #111;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    all 0.35s ease;
+}
+
+.admin-login__btn:hover {
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 16px 30px rgba(201,168,76,0.25);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .admin-login__card {
+    padding:
+      36px 26px;
+  }
+
+  .admin-login__header h1 {
+    font-size:
+      2rem;
+  }
+}

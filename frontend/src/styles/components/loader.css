@@ -1,0 +1,188 @@
+/* ============================================================
+   LOADER
+   ============================================================ */
+
+.loader {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   FULLSCREEN
+   ============================================================ */
+
+.loader--fullscreen {
+  width: 100%;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #171717 0%,
+      #0D0D0D 100%
+    );
+}
+
+
+/* ============================================================
+   GLOW
+   ============================================================ */
+
+.loader__glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201,168,76,0.12),
+      transparent 70%
+    );
+
+  animation:
+    loaderGlow 4s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.loader__content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ============================================================
+   RING
+   ============================================================ */
+
+.loader__ring {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(201,168,76,0.2);
+
+  border-top:
+    1px solid var(--gold);
+
+  border-right:
+    1px solid rgba(201,168,76,0.7);
+
+  box-shadow:
+    0 0 24px rgba(201,168,76,0.18);
+}
+
+
+/* ============================================================
+   INNER DOT
+   ============================================================ */
+
+.loader__dot {
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background:
+    var(--gold);
+
+  box-shadow:
+    0 0 18px rgba(201,168,76,0.6);
+}
+
+
+/* ============================================================
+   TEXT
+   ============================================================ */
+
+.loader__text {
+  margin-top: 34px;
+
+  color:
+    rgba(250,248,245,0.75);
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   GLOW ANIMATION
+   ============================================================ */
+
+@keyframes loaderGlow {
+
+  0%,
+  100% {
+    transform:
+      scale(1);
+
+    opacity: 0.55;
+  }
+
+  50% {
+    transform:
+      scale(1.12);
+
+    opacity: 1;
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .loader__ring {
+    width: 74px;
+    height: 74px;
+  }
+
+  .loader__text {
+    margin-top: 28px;
+
+    font-size: 0.78rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .loader__ring {
+    width: 64px;
+    height: 64px;
+  }
+
+  .loader__dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .loader__text {
+    letter-spacing: 0.14em;
+  }
+}

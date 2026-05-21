@@ -1,0 +1,557 @@
+/* ============================================================
+   DASHBOARD
+   ============================================================ */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.dashboard-header h1 {
+  margin-bottom: 10px;
+
+  font-size:
+    2rem;
+
+  color:
+    var(--warm-white);
+}
+
+.dashboard-header p {
+  color:
+    rgba(255,255,255,0.62);
+}
+
+
+/* ============================================================
+   BUTTON
+   ============================================================ */
+
+.dashboard-header__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding:
+    14px 20px;
+
+  border: none;
+
+  border-radius:
+    14px;
+
+  background:
+    rgba(201,168,76,0.14);
+
+  border:
+    1px solid rgba(201,168,76,0.22);
+
+  color:
+    var(--primary-gold);
+
+  cursor: pointer;
+
+  transition:
+    all 0.35s ease;
+}
+
+.dashboard-header__btn:hover {
+  transform:
+    translateY(-3px);
+
+  background:
+    rgba(201,168,76,0.2);
+}
+
+
+/* ============================================================
+   STATS
+   ============================================================ */
+
+.dashboard-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap:
+    24px;
+}
+
+
+/* ============================================================
+   STAT CARD
+   ============================================================ */
+
+.dashboard-stat {
+  padding:
+    28px;
+
+  border-radius:
+    24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  transition:
+    all 0.35s ease;
+}
+
+.dashboard-stat:hover {
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(201,168,76,0.22);
+}
+
+
+/* ============================================================
+   STAT TOP
+   ============================================================ */
+
+.dashboard-stat__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.dashboard-stat__icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius:
+    16px;
+
+  background:
+    rgba(201,168,76,0.12);
+
+  color:
+    var(--primary-gold);
+
+  font-size: 1.2rem;
+}
+
+.dashboard-stat__growth {
+  color:
+    #4ade80;
+
+  font-size:
+    0.9rem;
+}
+
+.dashboard-stat h2 {
+  margin-bottom: 10px;
+
+  font-size:
+    2rem;
+}
+
+.dashboard-stat p {
+  color:
+    rgba(255,255,255,0.62);
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.2fr 1fr;
+
+  gap:
+    24px;
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.dashboard-card {
+  padding:
+    28px;
+
+  border-radius:
+    24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+}
+
+
+/* ============================================================
+   CARD HEADER
+   ============================================================ */
+
+.dashboard-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 26px;
+}
+
+.dashboard-card__header h3 {
+  color:
+    var(--warm-white);
+}
+
+.dashboard-card__header button {
+  border: none;
+
+  background: transparent;
+
+  color:
+    var(--primary-gold);
+
+  cursor: pointer;
+}
+
+
+/* ============================================================
+   BOOKINGS
+   ============================================================ */
+
+.dashboard-bookings {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dashboard-booking {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding:
+    18px;
+
+  border-radius:
+    16px;
+
+  background:
+    rgba(255,255,255,0.03);
+}
+
+.dashboard-booking h4 {
+  margin-bottom: 6px;
+}
+
+.dashboard-booking p {
+  color:
+    rgba(255,255,255,0.58);
+
+  font-size:
+    0.92rem;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.booking-status {
+  padding:
+    8px 14px;
+
+  border-radius:
+    999px;
+
+  font-size:
+    0.78rem;
+}
+
+.booking-status.pending {
+  background:
+    rgba(251,191,36,0.14);
+
+  color:
+    #fbbf24;
+}
+
+.booking-status.confirmed {
+  background:
+    rgba(74,222,128,0.14);
+
+  color:
+    #4ade80;
+}
+
+.booking-status.in-progress {
+  background:
+    rgba(96,165,250,0.14);
+
+  color:
+    #60a5fa;
+}
+
+
+/* ============================================================
+   MESSAGES
+   ============================================================ */
+
+.dashboard-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dashboard-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  padding:
+    16px;
+
+  border-radius:
+    16px;
+
+  background:
+    rgba(255,255,255,0.03);
+}
+
+.dashboard-message__avatar {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(201,168,76,0.14);
+
+  color:
+    var(--primary-gold);
+
+  font-weight: 600;
+}
+
+.dashboard-message h4 {
+  margin-bottom: 6px;
+}
+
+.dashboard-message p {
+  color:
+    rgba(255,255,255,0.58);
+
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   BOTTOM GRID
+   ============================================================ */
+
+.dashboard-bottom {
+  display: grid;
+
+  grid-template-columns:
+    1.3fr 0.7fr;
+
+  gap:
+    24px;
+}
+
+
+/* ============================================================
+   PERFORMANCE
+   ============================================================ */
+
+.dashboard-performance,
+.dashboard-users {
+  padding:
+    28px;
+
+  border-radius:
+    24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.dashboard-performance__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.dashboard-performance__header span {
+  color:
+    #4ade80;
+}
+
+
+/* ============================================================
+   GRAPH
+   ============================================================ */
+
+.dashboard-performance__graph {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+
+  height: 220px;
+}
+
+.graph-bar {
+  flex: 1;
+
+  border-radius:
+    12px 12px 0 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(201,168,76,0.95),
+      rgba(201,168,76,0.45)
+    );
+}
+
+.h1 { height: 40%; }
+.h2 { height: 60%; }
+.h3 { height: 48%; }
+.h4 { height: 82%; }
+.h5 { height: 68%; }
+.h6 { height: 92%; }
+.h7 { height: 75%; }
+
+
+/* ============================================================
+   USERS
+   ============================================================ */
+
+.dashboard-users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.dashboard-users__icon {
+  width: 74px;
+  height: 74px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(201,168,76,0.14);
+
+  color:
+    var(--primary-gold);
+
+  font-size: 1.8rem;
+}
+
+.dashboard-users h2 {
+  margin-bottom: 12px;
+
+  font-size:
+    3rem;
+}
+
+.dashboard-users p {
+  color:
+    rgba(255,255,255,0.62);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1200px) {
+
+  .dashboard-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .dashboard-grid,
+  .dashboard-bottom {
+    grid-template-columns:
+      1fr;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-stats {
+    grid-template-columns:
+      1fr;
+  }
+
+  .dashboard-stat,
+  .dashboard-card,
+  .dashboard-performance,
+  .dashboard-users {
+    padding:
+      24px;
+  }
+}

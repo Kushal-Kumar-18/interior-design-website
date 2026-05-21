@@ -1,0 +1,340 @@
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.admin-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.messages-header h1 {
+  margin-bottom: 10px;
+
+  font-size:
+    2rem;
+
+  color:
+    var(--warm-white);
+}
+
+.messages-header p {
+  color:
+    rgba(255,255,255,0.62);
+}
+
+
+/* ============================================================
+   TOOLBAR
+   ============================================================ */
+
+.messages-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+
+.messages-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 340px;
+
+  padding:
+    14px 18px;
+
+  border-radius:
+    16px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.messages-search svg {
+  color:
+    rgba(255,255,255,0.5);
+}
+
+.messages-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color:
+    white;
+}
+
+.messages-search input::placeholder {
+  color:
+    rgba(255,255,255,0.45);
+}
+
+
+/* ============================================================
+   LIST
+   ============================================================ */
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.message-card {
+  padding:
+    28px;
+
+  border-radius:
+    24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  transition:
+    all 0.35s ease;
+}
+
+.message-card:hover {
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(201,168,76,0.2);
+}
+
+.message-card.unread {
+  border-left:
+    4px solid var(--primary-gold);
+}
+
+
+/* ============================================================
+   TOP
+   ============================================================ */
+
+.message-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 24px;
+}
+
+
+/* ============================================================
+   USER
+   ============================================================ */
+
+.message-card__user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.message-card__avatar {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(201,168,76,0.14);
+
+  color:
+    var(--primary-gold);
+
+  font-size:
+    1.2rem;
+
+  font-weight: 600;
+}
+
+.message-card__user h3 {
+  margin-bottom: 6px;
+
+  color:
+    var(--warm-white);
+}
+
+.message-card__user span {
+  color:
+    rgba(255,255,255,0.55);
+
+  font-size:
+    0.9rem;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.message-card__status {
+  padding:
+    8px 14px;
+
+  border-radius:
+    999px;
+
+  background:
+    rgba(251,191,36,0.14);
+
+  color:
+    #fbbf24;
+
+  font-size:
+    0.78rem;
+}
+
+
+/* ============================================================
+   SUBJECT
+   ============================================================ */
+
+.message-card__subject {
+  margin-bottom: 18px;
+
+  color:
+    var(--warm-white);
+}
+
+
+/* ============================================================
+   TEXT
+   ============================================================ */
+
+.message-card__text {
+  line-height: 1.9;
+
+  color:
+    rgba(255,255,255,0.68);
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.message-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-top: 28px;
+}
+
+.message-card__footer span {
+  color:
+    rgba(255,255,255,0.5);
+
+  font-size:
+    0.9rem;
+}
+
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.message-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.message-card__actions button {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  color:
+    rgba(255,255,255,0.72);
+
+  cursor: pointer;
+
+  transition:
+    all 0.35s ease;
+}
+
+.message-card__actions button:hover {
+  transform:
+    translateY(-3px);
+
+  background:
+    rgba(201,168,76,0.14);
+
+  color:
+    var(--primary-gold);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .messages-search {
+    width: 100%;
+  }
+
+  .message-card {
+    padding:
+      24px;
+  }
+
+  .message-card__top,
+  .message-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

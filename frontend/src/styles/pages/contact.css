@@ -1,0 +1,330 @@
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.contact-page {
+  position: relative;
+
+  overflow-x: hidden;
+
+  background:
+    var(--obsidian);
+}
+
+
+/* ============================================================
+   INFO SECTION
+   ============================================================ */
+
+.contact-info-section {
+  position: relative;
+
+  background:
+    linear-gradient(
+      180deg,
+      #141414 0%,
+      #181818 100%
+    );
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.contact-info-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    clamp(24px, 3vw, 36px);
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.contact-info-card {
+  position: relative;
+
+  padding:
+    42px 34px;
+
+  overflow: hidden;
+
+  border-radius:
+    var(--radius-xl);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  backdrop-filter:
+    blur(14px);
+
+  text-align: center;
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+/* ============================================================
+   GOLD GLOW
+   ============================================================ */
+
+.contact-info-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -25%;
+  right: -10%;
+
+  width: 240px;
+  height: 240px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201,168,76,0.08),
+      transparent 70%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.45s ease;
+}
+
+
+/* ============================================================
+   HOVER
+   ============================================================ */
+
+.contact-info-card:hover {
+  transform:
+    translateY(-10px);
+
+  border-color:
+    rgba(201,168,76,0.22);
+
+  box-shadow:
+    0 24px 60px rgba(0,0,0,0.35);
+}
+
+.contact-info-card:hover::before {
+  opacity: 1;
+}
+
+
+/* ============================================================
+   ICON
+   ============================================================ */
+
+.contact-info-card__icon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin:
+    0 auto 24px;
+
+  border-radius:
+    var(--radius-lg);
+
+  background:
+    rgba(201,168,76,0.08);
+
+  color:
+    var(--gold);
+
+  font-size: 1.9rem;
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.contact-info-card h3 {
+  margin-bottom: 16px;
+
+  color:
+    var(--warm-white);
+}
+
+
+/* ============================================================
+   TEXT
+   ============================================================ */
+
+.contact-info-card a,
+.contact-info-card p {
+  color:
+    rgba(250,248,245,0.66);
+
+  line-height: 1.8;
+
+  text-decoration: none;
+
+  transition:
+    color 0.35s ease;
+}
+
+.contact-info-card a:hover {
+  color:
+    var(--gold);
+}
+
+
+/* ============================================================
+   FORMS
+   ============================================================ */
+
+.contact-forms {
+  background:
+    linear-gradient(
+      180deg,
+      #181818 0%,
+      #111111 100%
+    );
+}
+
+
+/* ============================================================
+   FORMS GRID
+   ============================================================ */
+
+.contact-forms__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap:
+    clamp(32px, 4vw, 44px);
+}
+
+
+/* ============================================================
+   MAP
+   ============================================================ */
+
+.contact-map {
+  position: relative;
+
+  height:
+    520px;
+
+  overflow: hidden;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+
+  filter:
+    grayscale(1)
+    contrast(1.05)
+    brightness(0.82);
+}
+
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+
+.contact-error {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    var(--obsidian);
+}
+
+.contact-error h2 {
+  margin-bottom: 14px;
+
+  color:
+    var(--warm-white);
+}
+
+.contact-error p {
+  color:
+    rgba(250,248,245,0.62);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 992px) {
+
+  .contact-info-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .contact-forms__grid {
+    grid-template-columns:
+      1fr;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .contact-info-card {
+    padding:
+      36px 28px;
+  }
+
+  .contact-map {
+    height:
+      420px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .contact-info-card {
+    padding:
+      32px 22px;
+  }
+
+  .contact-info-card__icon {
+    width: 64px;
+    height: 64px;
+
+    font-size: 1.6rem;
+  }
+
+  .contact-map {
+    height:
+      340px;
+  }
+}

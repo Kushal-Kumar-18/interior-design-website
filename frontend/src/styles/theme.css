@@ -1,0 +1,630 @@
+/* ============================================================
+   INTERIORX — GLOBAL THEME SYSTEM v4.0
+   Luxury Interior Design System
+   ============================================================ */
+
+
+/* ============================================================
+   GOOGLE FONTS
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap');
+
+
+/* ============================================================
+   ROOT VARIABLES
+   ============================================================ */
+:root {
+
+  /* COLORS */
+  --obsidian: #0D0D0D;
+  --charcoal: #161616;
+  --warm-black: #111111;
+
+  --warm-white: #FAF8F5;
+  --soft-white: #F4F1EA;
+
+  --gold: #C9A84C;
+  --gold-light: #E2C97E;
+  --gold-dark: #9D7E2B;
+
+  --muted-text: rgba(250,248,245,0.68);
+  --soft-text: rgba(250,248,245,0.46);
+
+  --border-light: rgba(201,168,76,0.14);
+  --border-medium: rgba(201,168,76,0.22);
+
+  --success: #2ECC71;
+  --danger: #E74C3C;
+  --warning: #F39C12;
+
+  /* TYPOGRAPHY */
+  --font-display:
+    'Cormorant Garamond',
+    Georgia,
+    serif;
+
+  --font-body:
+    'Jost',
+    'Helvetica Neue',
+    sans-serif;
+
+  /* CONTAINER */
+  --container-xl: 1600px;
+  --container-lg: 1320px;
+  --container-md: 1120px;
+  --container-sm: 920px;
+
+  /* SECTION SPACING */
+  --section-padding:
+    clamp(80px, 10vw, 140px);
+
+  --section-padding-sm:
+    clamp(64px, 8vw, 100px);
+
+  /* RADIUS */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+
+  /* SHADOWS */
+  --shadow-sm:
+    0 4px 20px rgba(0,0,0,0.18);
+
+  --shadow-md:
+    0 12px 40px rgba(0,0,0,0.28);
+
+  --shadow-lg:
+    0 24px 80px rgba(0,0,0,0.4);
+
+  /* TRANSITIONS */
+  --transition-fast:
+    0.22s ease;
+
+  --transition-medium:
+    0.35s ease;
+
+  --transition-slow:
+    0.5s ease;
+
+  /* Z INDEX */
+  --z-navbar: 1200;
+  --z-overlay: 1190;
+  --z-modal: 2000;
+}
+
+
+/* ============================================================
+   CSS RESET
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--obsidian);
+
+  color: var(--warm-white);
+
+  font-family: var(--font-body);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+/* ============================================================
+   SELECTION
+   ============================================================ */
+::selection {
+  background: var(--gold);
+  color: var(--obsidian);
+}
+
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--warm-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      180deg,
+      var(--gold),
+      var(--gold-dark)
+    );
+
+  border-radius: 999px;
+}
+
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size:
+    clamp(3rem, 7vw, 6rem);
+}
+
+h2 {
+  font-size:
+    clamp(2.2rem, 5vw, 4.2rem);
+}
+
+h3 {
+  font-size:
+    clamp(1.6rem, 3vw, 2.4rem);
+}
+
+p {
+  margin: 0;
+
+  line-height: 1.8;
+
+  color: var(--muted-text);
+
+  font-size:
+    clamp(0.95rem, 1.4vw, 1.02rem);
+}
+
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+.container {
+  width: 100%;
+
+  max-width: var(--container-lg);
+
+  margin: 0 auto;
+
+  padding:
+    0 clamp(20px, 5vw, 64px);
+}
+
+.container-sm {
+  max-width: var(--container-sm);
+}
+
+.container-xl {
+  max-width: var(--container-xl);
+}
+
+
+/* ============================================================
+   SECTION
+   ============================================================ */
+.section {
+  position: relative;
+
+  padding:
+    var(--section-padding) 0;
+}
+
+.section-sm {
+  padding:
+    var(--section-padding-sm) 0;
+}
+
+
+/* ============================================================
+   SECTION HEADINGS
+   ============================================================ */
+.section-heading {
+  margin-bottom: 60px;
+
+  text-align: center;
+}
+
+.section-heading__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  color: var(--gold);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.section-heading__eyebrow::before,
+.section-heading__eyebrow::after {
+  content: "";
+
+  width: 36px;
+  height: 1px;
+
+  background:
+    rgba(201,168,76,0.4);
+}
+
+.section-heading__title {
+  color: var(--warm-white);
+}
+
+.section-heading__description {
+  max-width: 720px;
+
+  margin:
+    22px auto 0;
+}
+
+
+/* ============================================================
+   BUTTON SYSTEM
+   ============================================================ */
+.btn {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border: none;
+
+  padding:
+    14px 28px;
+
+  border-radius: var(--radius-sm);
+
+  font-family: var(--font-body);
+
+  font-size: 0.74rem;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    transform var(--transition-fast),
+    opacity var(--transition-fast),
+    background var(--transition-medium),
+    border-color var(--transition-medium),
+    color var(--transition-medium),
+    box-shadow var(--transition-medium);
+}
+
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold),
+      var(--gold-light)
+    );
+
+  color: var(--obsidian);
+
+  box-shadow:
+    0 10px 30px rgba(201,168,76,0.18);
+}
+
+.btn-primary:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 16px 40px rgba(201,168,76,0.28);
+}
+
+
+/* OUTLINE BUTTON */
+.btn-outline {
+  background: transparent;
+
+  color: var(--warm-white);
+
+  border:
+    1px solid rgba(201,168,76,0.28);
+}
+
+.btn-outline:hover {
+  background:
+    rgba(201,168,76,0.08);
+
+  border-color:
+    rgba(201,168,76,0.55);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* GHOST BUTTON */
+.btn-ghost {
+  background: transparent;
+
+  color: var(--gold);
+}
+
+.btn-ghost:hover {
+  opacity: 0.8;
+}
+
+
+/* ============================================================
+   CARD SYSTEM
+   ============================================================ */
+.card {
+  position: relative;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.01)
+    );
+
+  border:
+    1px solid var(--border-light);
+
+  border-radius: var(--radius-md);
+
+  overflow: hidden;
+
+  transition:
+    transform var(--transition-medium),
+    border-color var(--transition-medium),
+    box-shadow var(--transition-medium);
+}
+
+.card:hover {
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(201,168,76,0.3);
+
+  box-shadow:
+    var(--shadow-md);
+}
+
+
+/* ============================================================
+   FORM SYSTEM
+   ============================================================ */
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.form-label {
+  color: var(--warm-white);
+
+  font-size: 0.78rem;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  background:
+    rgba(255,255,255,0.03);
+
+  color: var(--warm-white);
+
+  padding:
+    16px 18px;
+
+  border-radius: var(--radius-sm);
+
+  outline: none;
+
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color:
+    rgba(201,168,76,0.5);
+
+  box-shadow:
+    0 0 0 3px rgba(201,168,76,0.08);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+
+/* ============================================================
+   GRID SYSTEM
+   ============================================================ */
+.grid {
+  display: grid;
+  gap: 28px;
+}
+
+.grid-2 {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+}
+
+
+/* ============================================================
+   GOLD LINE
+   ============================================================ */
+.gold-line {
+  width: 42px;
+  height: 1px;
+
+  background:
+    rgba(201,168,76,0.45);
+
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+.text-center {
+  text-align: center;
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.bg-dark {
+  background: var(--charcoal);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+
+  .grid-4 {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+
+  .section-heading {
+    margin-bottom: 48px;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .section {
+    padding:
+      84px 0;
+  }
+}
+
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,242 @@
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.admin-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.settings-header h1 {
+  margin-bottom: 10px;
+
+  font-size:
+    2rem;
+
+  color:
+    var(--warm-white);
+}
+
+.settings-header p {
+  color:
+    rgba(255,255,255,0.62);
+}
+
+
+/* ============================================================
+   FORM
+   ============================================================ */
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.settings-card {
+  padding:
+    30px;
+
+  border-radius:
+    24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+}
+
+
+/* ============================================================
+   CARD HEADER
+   ============================================================ */
+
+.settings-card__header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 28px;
+}
+
+.settings-card__header svg {
+  color:
+    var(--primary-gold);
+
+  font-size:
+    1.2rem;
+}
+
+.settings-card__header h3 {
+  color:
+    var(--warm-white);
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.settings-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap:
+    24px;
+}
+
+
+/* ============================================================
+   FIELD
+   ============================================================ */
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-field.full-width {
+  grid-column:
+    span 2;
+}
+
+.settings-field label {
+  color:
+    rgba(255,255,255,0.75);
+
+  font-size:
+    0.95rem;
+}
+
+
+/* ============================================================
+   INPUT
+   ============================================================ */
+
+.settings-field input,
+.settings-field textarea {
+  width: 100%;
+
+  padding:
+    16px 18px;
+
+  border: none;
+  outline: none;
+
+  border-radius:
+    16px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  color:
+    white;
+
+  resize: none;
+
+  transition:
+    all 0.35s ease;
+}
+
+.settings-field input:focus,
+.settings-field textarea:focus {
+  border-color:
+    rgba(201,168,76,0.32);
+
+  box-shadow:
+    0 0 0 4px rgba(201,168,76,0.08);
+}
+
+.settings-field input::placeholder,
+.settings-field textarea::placeholder {
+  color:
+    rgba(255,255,255,0.4);
+}
+
+
+/* ============================================================
+   SAVE BUTTON
+   ============================================================ */
+
+.settings-save-btn {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding:
+    16px 26px;
+
+  border: none;
+
+  border-radius:
+    16px;
+
+  background:
+    rgba(201,168,76,0.14);
+
+  border:
+    1px solid rgba(201,168,76,0.24);
+
+  color:
+    var(--primary-gold);
+
+  cursor: pointer;
+
+  transition:
+    all 0.35s ease;
+}
+
+.settings-save-btn:hover {
+  transform:
+    translateY(-4px);
+
+  background:
+    rgba(201,168,76,0.2);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .settings-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .settings-field.full-width {
+    grid-column:
+      span 1;
+  }
+
+  .settings-card {
+    padding:
+      24px;
+  }
+}

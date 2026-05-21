@@ -1,0 +1,536 @@
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.portfolio-page {
+  position: relative;
+
+  overflow-x: hidden;
+
+  background:
+    var(--obsidian);
+}
+
+
+/* ============================================================
+   FILTERS
+   ============================================================ */
+
+.portfolio-filters {
+  padding:
+    34px 0;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.05);
+
+  background:
+    rgba(13,13,13,0.95);
+
+  backdrop-filter:
+    blur(14px);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 40;
+}
+
+
+/* ============================================================
+   FILTER WRAPPER
+   ============================================================ */
+
+.portfolio-filters__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ============================================================
+   FILTER BUTTON
+   ============================================================ */
+
+.portfolio-filter {
+  padding:
+    12px 22px;
+
+  border-radius:
+    999px;
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  background:
+    rgba(255,255,255,0.03);
+
+  color:
+    rgba(250,248,245,0.72);
+
+  cursor: pointer;
+
+  font-size: 0.86rem;
+  font-weight: 500;
+
+  transition:
+    all 0.35s ease;
+}
+
+.portfolio-filter:hover {
+  border-color:
+    rgba(201,168,76,0.28);
+
+  color:
+    var(--gold);
+}
+
+.portfolio-filter--active {
+  background:
+    var(--gold);
+
+  color:
+    var(--obsidian);
+
+  border-color:
+    var(--gold);
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.portfolio-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(340px, 1fr));
+
+  gap:
+    clamp(26px, 3vw, 38px);
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.portfolio-item {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius:
+    var(--radius-xl);
+
+  background:
+    linear-gradient(
+      180deg,
+      #1A1A1A,
+      #141414
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.05);
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.portfolio-item:hover {
+  transform:
+    translateY(-10px);
+
+  border-color:
+    rgba(201,168,76,0.18);
+
+  box-shadow:
+    0 24px 60px rgba(0,0,0,0.35);
+}
+
+
+/* ============================================================
+   IMAGE WRAP
+   ============================================================ */
+
+.portfolio-item__image-wrap {
+  position: relative;
+
+  height: 340px;
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   IMAGE
+   ============================================================ */
+
+.portfolio-item__image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s cubic-bezier(0.16,1,0.3,1);
+}
+
+.portfolio-item:hover
+.portfolio-item__image {
+  transform:
+    scale(1.08);
+}
+
+
+/* ============================================================
+   OVERLAY
+   ============================================================ */
+
+.portfolio-item__overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(13,13,13,0.08),
+      rgba(13,13,13,0.72)
+    );
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.portfolio-item__content {
+  padding:
+    30px 28px;
+}
+
+
+/* ============================================================
+   CATEGORY
+   ============================================================ */
+
+.portfolio-item__category {
+  margin-bottom: 14px;
+
+  color:
+    var(--gold);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.portfolio-item__title {
+  margin-bottom: 16px;
+
+  color:
+    var(--warm-white);
+
+  line-height: 1.12;
+}
+
+
+/* ============================================================
+   DESCRIPTION
+   ============================================================ */
+
+.portfolio-item__description {
+  color:
+    rgba(250,248,245,0.65);
+
+  line-height: 1.8;
+
+  font-size: 0.94rem;
+}
+
+
+/* ============================================================
+   BUTTON
+   ============================================================ */
+
+.portfolio-item__button {
+  margin-top: 28px;
+
+  border: none;
+  background: transparent;
+
+  color:
+    var(--gold);
+
+  cursor: pointer;
+
+  font-size: 0.88rem;
+  font-weight: 500;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.portfolio-item__button:hover {
+  transform:
+    translateX(4px);
+}
+
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+
+.portfolio-modal {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    30px;
+
+  z-index: 1000;
+}
+
+
+/* ============================================================
+   BACKDROP
+   ============================================================ */
+
+.portfolio-modal__backdrop {
+  position: absolute;
+  inset: 0;
+
+  background:
+    rgba(0,0,0,0.82);
+
+  backdrop-filter:
+    blur(12px);
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.portfolio-modal__content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(100%, 980px);
+
+  overflow: hidden;
+
+  border-radius:
+    var(--radius-xl);
+
+  background:
+    #141414;
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  box-shadow:
+    0 40px 120px rgba(0,0,0,0.45);
+}
+
+
+/* ============================================================
+   CLOSE
+   ============================================================ */
+
+.portfolio-modal__close {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background:
+    rgba(13,13,13,0.75);
+
+  color:
+    var(--warm-white);
+
+  cursor: pointer;
+
+  font-size: 1.5rem;
+
+  z-index: 5;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.portfolio-modal__close:hover {
+  background:
+    var(--gold);
+
+  color:
+    var(--obsidian);
+}
+
+
+/* ============================================================
+   MODAL IMAGE
+   ============================================================ */
+
+.portfolio-modal__image-wrap {
+  height:
+    clamp(280px, 45vw, 520px);
+
+  overflow: hidden;
+}
+
+.portfolio-modal__image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* ============================================================
+   DETAILS
+   ============================================================ */
+
+.portfolio-modal__details {
+  padding:
+    clamp(28px, 5vw, 42px);
+}
+
+.portfolio-modal__category {
+  margin-bottom: 16px;
+
+  color:
+    var(--gold);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.portfolio-modal__details h2 {
+  margin-bottom: 18px;
+
+  color:
+    var(--warm-white);
+}
+
+.portfolio-modal__details p {
+  color:
+    rgba(250,248,245,0.65);
+
+  line-height: 1.9;
+}
+
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+
+.portfolio-error {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    var(--obsidian);
+}
+
+.portfolio-error h2 {
+  margin-bottom: 14px;
+
+  color:
+    var(--warm-white);
+}
+
+.portfolio-error p {
+  color:
+    rgba(250,248,245,0.62);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .portfolio-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .portfolio-item__image-wrap {
+    height: 280px;
+  }
+
+  .portfolio-modal {
+    padding:
+      18px;
+  }
+
+  .portfolio-modal__details {
+    padding:
+      28px 22px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .portfolio-filters {
+    padding:
+      24px 0;
+  }
+
+  .portfolio-filter {
+    padding:
+      10px 18px;
+
+    font-size: 0.8rem;
+  }
+
+  .portfolio-item__content {
+    padding:
+      24px 20px;
+  }
+
+  .portfolio-item__description {
+    font-size: 0.9rem;
+  }
+
+  .portfolio-modal__close {
+    width: 38px;
+    height: 38px;
+  }
+}

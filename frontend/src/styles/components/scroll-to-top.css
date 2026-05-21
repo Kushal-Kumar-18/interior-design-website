@@ -1,0 +1,137 @@
+/* ============================================================
+   BUTTON
+   ============================================================ */
+
+.scroll-top {
+  position: fixed;
+
+  right: 28px;
+  bottom: 28px;
+
+  width: 58px;
+  height: 58px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(18,18,18,0.82);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:
+    blur(14px);
+
+  -webkit-backdrop-filter:
+    blur(14px);
+
+  color:
+    var(--warm-white);
+
+  cursor: pointer;
+
+  z-index: 999;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 32px rgba(0,0,0,0.25);
+
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease;
+}
+
+
+/* ============================================================
+   GOLD GLOW
+   ============================================================ */
+
+.scroll-top::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201,168,76,0.16),
+      transparent 70%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.35s ease;
+}
+
+
+/* ============================================================
+   HOVER
+   ============================================================ */
+
+.scroll-top:hover {
+  color:
+    var(--gold);
+
+  border-color:
+    rgba(201,168,76,0.28);
+
+  background:
+    rgba(22,22,22,0.95);
+}
+
+.scroll-top:hover::before {
+  opacity: 1;
+}
+
+
+/* ============================================================
+   SVG
+   ============================================================ */
+
+.scroll-top svg {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .scroll-top {
+    width: 52px;
+    height: 52px;
+
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .scroll-top {
+    width: 48px;
+    height: 48px;
+
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .scroll-top svg {
+    width: 16px;
+    height: 16px;
+  }
+}

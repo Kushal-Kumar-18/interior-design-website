@@ -1,0 +1,332 @@
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.admin-users {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.users-header h1 {
+  margin-bottom: 10px;
+
+  font-size:
+    2rem;
+
+  color:
+    var(--warm-white);
+}
+
+.users-header p {
+  color:
+    rgba(255,255,255,0.62);
+}
+
+
+/* ============================================================
+   TOOLBAR
+   ============================================================ */
+
+.users-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+
+.users-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 340px;
+
+  padding:
+    14px 18px;
+
+  border-radius:
+    16px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.users-search svg {
+  color:
+    rgba(255,255,255,0.5);
+}
+
+.users-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color:
+    white;
+}
+
+.users-search input::placeholder {
+  color:
+    rgba(255,255,255,0.45);
+}
+
+
+/* ============================================================
+   TABLE WRAPPER
+   ============================================================ */
+
+.users-table-wrapper {
+  overflow-x: auto;
+
+  border-radius:
+    24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+}
+
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+
+.users-table {
+  width: 100%;
+
+  min-width: 900px;
+
+  border-collapse: collapse;
+}
+
+.users-table thead {
+  background:
+    rgba(255,255,255,0.03);
+}
+
+.users-table th {
+  padding:
+    22px 24px;
+
+  text-align: left;
+
+  color:
+    rgba(255,255,255,0.68);
+
+  font-weight: 500;
+}
+
+.users-table td {
+  padding:
+    22px 24px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.06);
+}
+
+
+/* ============================================================
+   USER INFO
+   ============================================================ */
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-avatar {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(201,168,76,0.14);
+
+  color:
+    var(--primary-gold);
+
+  font-size:
+    1.1rem;
+
+  font-weight: 600;
+}
+
+.user-info h4 {
+  margin-bottom: 6px;
+
+  color:
+    var(--warm-white);
+}
+
+.user-info p {
+  color:
+    rgba(255,255,255,0.55);
+
+  font-size:
+    0.9rem;
+}
+
+
+/* ============================================================
+   ROLE
+   ============================================================ */
+
+.user-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding:
+    8px 14px;
+
+  border-radius:
+    999px;
+
+  font-size:
+    0.8rem;
+}
+
+.user-role.admin {
+  background:
+    rgba(201,168,76,0.14);
+
+  color:
+    var(--primary-gold);
+}
+
+.user-role.customer {
+  background:
+    rgba(96,165,250,0.14);
+
+  color:
+    #60a5fa;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.user-status {
+  padding:
+    8px 14px;
+
+  border-radius:
+    999px;
+
+  font-size:
+    0.8rem;
+}
+
+.user-status.active {
+  background:
+    rgba(74,222,128,0.14);
+
+  color:
+    #4ade80;
+}
+
+.user-status.blocked {
+  background:
+    rgba(248,113,113,0.14);
+
+  color:
+    #f87171;
+}
+
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-actions button {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius:
+    14px;
+
+  cursor: pointer;
+
+  transition:
+    all 0.35s ease;
+}
+
+.user-actions button:hover {
+  transform:
+    translateY(-4px);
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.activate-btn {
+  background:
+    rgba(96,165,250,0.14);
+
+  color:
+    #60a5fa;
+}
+
+.delete-btn {
+  background:
+    rgba(248,113,113,0.14);
+
+  color:
+    #f87171;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .users-search {
+    width: 100%;
+  }
+}

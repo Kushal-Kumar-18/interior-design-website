@@ -1,0 +1,257 @@
+/* ============================================================
+   GLOBAL UTILITIES
+   ============================================================ */
+
+.container {
+  width: min(100% - 40px, var(--max-w));
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding:
+    clamp(90px, 12vw, 140px) 0;
+}
+
+.section-sm {
+  padding:
+    clamp(70px, 8vw, 100px) 0;
+}
+
+.section-lg {
+  padding:
+    clamp(120px, 14vw, 180px) 0;
+}
+
+
+/* ============================================================
+   SECTION HEADINGS
+   ============================================================ */
+
+.section-heading {
+  text-align: center;
+
+  margin-bottom:
+    clamp(56px, 8vw, 88px);
+}
+
+.section-heading__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 20px;
+
+  color:
+    var(--gold);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.section-heading__title {
+  margin-bottom: 20px;
+
+  color:
+    var(--warm-white);
+
+  line-height: 1.1;
+}
+
+.section-heading__description {
+  max-width: 720px;
+
+  margin-inline: auto;
+
+  color:
+    rgba(250,248,245,0.65);
+
+  line-height: 1.9;
+}
+
+
+/* ============================================================
+   GOLD LINE
+   ============================================================ */
+
+.gold-line {
+  width: 34px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--gold),
+      rgba(201,168,76,0.25)
+    );
+}
+
+
+/* ============================================================
+   GRID UTILITIES
+   ============================================================ */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap:
+    clamp(24px, 4vw, 40px);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    clamp(24px, 4vw, 40px);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap:
+    clamp(20px, 3vw, 32px);
+}
+
+
+/* ============================================================
+   GLASS EFFECT
+   ============================================================ */
+
+.glass-card {
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+}
+
+
+/* ============================================================
+   IMAGE UTILITIES
+   ============================================================ */
+
+.image-cover {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.image-contain {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* ============================================================
+   TEXT UTILITIES
+   ============================================================ */
+
+.text-center {
+  text-align: center;
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.text-muted {
+  color:
+    rgba(250,248,245,0.6);
+}
+
+
+/* ============================================================
+   FLEX UTILITIES
+   ============================================================ */
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ============================================================
+   OVERLAY UTILITIES
+   ============================================================ */
+
+.overlay-dark {
+  position: absolute;
+  inset: 0;
+
+  background:
+    rgba(13,13,13,0.65);
+}
+
+.overlay-gradient {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(13,13,13,0.25) 0%,
+      rgba(13,13,13,0.85) 100%
+    );
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 992px) {
+
+  .grid-4 {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns:
+      1fr;
+  }
+
+  .section {
+    padding:
+      clamp(70px, 12vw, 100px) 0;
+  }
+
+  .section-heading {
+    margin-bottom: 54px;
+  }
+}

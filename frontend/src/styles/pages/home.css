@@ -1,0 +1,375 @@
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.home-page {
+  position: relative;
+
+  overflow-x: hidden;
+
+  background:
+    var(--obsidian);
+}
+
+
+/* ============================================================
+   COMMON SECTION
+   ============================================================ */
+
+.home-page section {
+  position: relative;
+}
+
+
+/* ============================================================
+   SECTION HEADING
+   ============================================================ */
+
+.section-heading {
+  max-width: 860px;
+
+  margin:
+    0 auto 80px;
+
+  text-align: center;
+}
+
+.section-heading__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  margin-bottom: 24px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  font-size: 0.82rem;
+
+  color:
+    var(--primary-gold);
+}
+
+.section-heading__title {
+  margin-bottom: 24px;
+
+  color:
+    var(--warm-white);
+
+  line-height: 1.08;
+}
+
+.section-heading__description {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  line-height: 1.9;
+
+  color:
+    rgba(255,255,255,0.72);
+}
+
+
+/* ============================================================
+   PORTFOLIO
+   ============================================================ */
+
+.home-portfolio {
+  background:
+    linear-gradient(
+      180deg,
+      #121212 0%,
+      #181818 100%
+    );
+}
+
+.home-portfolio__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    30px;
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.home-portfolio__card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius:
+    30px;
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+/* ============================================================
+   HOVER
+   ============================================================ */
+
+.home-portfolio__card:hover {
+  transform:
+    translateY(-10px);
+
+  border-color:
+    rgba(201,168,76,0.2);
+
+  box-shadow:
+    0 28px 60px rgba(0,0,0,0.32);
+}
+
+
+/* ============================================================
+   IMAGE WRAPPER
+   ============================================================ */
+
+.home-portfolio__image-wrap {
+  position: relative;
+
+  width: 100%;
+
+  height: 320px;
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   IMAGE
+   ============================================================ */
+
+.home-portfolio__image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s ease;
+}
+
+.home-portfolio__card:hover
+.home-portfolio__image {
+  transform:
+    scale(1.08);
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.home-portfolio__content {
+  padding:
+    30px;
+}
+
+.home-portfolio__category {
+  display: inline-block;
+
+  margin-bottom: 16px;
+
+  font-size: 0.82rem;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color:
+    var(--primary-gold);
+}
+
+.home-portfolio__content h3 {
+  margin-bottom: 16px;
+
+  color:
+    var(--warm-white);
+
+  line-height: 1.2;
+}
+
+.home-portfolio__content p {
+  line-height: 1.9;
+
+  color:
+    rgba(255,255,255,0.7);
+}
+
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+
+.home-testimonials {
+  background:
+    linear-gradient(
+      180deg,
+      #181818 0%,
+      #101010 100%
+    );
+}
+
+.home-testimonials__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    28px;
+}
+
+
+/* ============================================================
+   TESTIMONIAL CARD
+   ============================================================ */
+
+.testimonial-card {
+  position: relative;
+
+  padding:
+    42px 34px;
+
+  border-radius:
+    28px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+/* ============================================================
+   HOVER
+   ============================================================ */
+
+.testimonial-card:hover {
+  transform:
+    translateY(-10px);
+
+  border-color:
+    rgba(201,168,76,0.22);
+
+  box-shadow:
+    0 24px 60px rgba(0,0,0,0.32);
+}
+
+
+/* ============================================================
+   QUOTE
+   ============================================================ */
+
+.testimonial-card__quote {
+  margin-bottom: 18px;
+
+  font-size: 4rem;
+
+  line-height: 1;
+
+  color:
+    rgba(201,168,76,0.35);
+}
+
+
+/* ============================================================
+   REVIEW
+   ============================================================ */
+
+.testimonial-card__review {
+  margin-bottom: 28px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(255,255,255,0.72);
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.testimonial-card__footer h4 {
+  color:
+    var(--warm-white);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1200px) {
+
+  .home-portfolio__grid,
+  .home-testimonials__grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .section-heading {
+    margin-bottom: 60px;
+  }
+
+  .home-portfolio__grid,
+  .home-testimonials__grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .home-portfolio__image-wrap {
+    height: 260px;
+  }
+
+  .home-portfolio__content,
+  .testimonial-card {
+    padding:
+      28px 24px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .home-portfolio__image-wrap {
+    height: 220px;
+  }
+
+  .testimonial-card__quote {
+    font-size: 3rem;
+  }
+}

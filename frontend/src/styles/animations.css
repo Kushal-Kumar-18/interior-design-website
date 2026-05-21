@@ -1,0 +1,219 @@
+/* ============================================================
+   FADE UP
+   ============================================================ */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform:
+      translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation:
+    fadeUp 0.8s cubic-bezier(0.16,1,0.3,1)
+    forwards;
+}
+
+
+/* ============================================================
+   FLOAT
+   ============================================================ */
+
+@keyframes floatY {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation:
+    floatY 5s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   SHIMMER
+   ============================================================ */
+
+@keyframes shimmer {
+
+  0% {
+    background-position:
+      200% 0;
+  }
+
+  100% {
+    background-position:
+      -200% 0;
+  }
+}
+
+.shimmer {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.03)
+    );
+
+  background-size:
+    200% 100%;
+
+  animation:
+    shimmer 2s linear infinite;
+}
+
+
+/* ============================================================
+   SPIN
+   ============================================================ */
+
+@keyframes spin {
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation:
+    spin 1s linear infinite;
+}
+
+
+/* ============================================================
+   GLOW PULSE
+   ============================================================ */
+
+@keyframes glowPulse {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform:
+      scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform:
+      scale(1.08);
+  }
+}
+
+.animate-glow {
+  animation:
+    glowPulse 3s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   GOLD LINE REVEAL
+   ============================================================ */
+
+@keyframes lineReveal {
+
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.animate-line {
+  animation:
+    lineReveal 1s ease forwards;
+}
+
+
+/* ============================================================
+   IMAGE ZOOM
+   ============================================================ */
+
+@keyframes imageZoom {
+
+  from {
+    transform:
+      scale(1.08);
+  }
+
+  to {
+    transform:
+      scale(1);
+  }
+}
+
+.animate-image-zoom {
+  animation:
+    imageZoom 1.4s cubic-bezier(0.16,1,0.3,1)
+    forwards;
+}
+
+
+/* ============================================================
+   BLUR IN
+   ============================================================ */
+
+@keyframes blurIn {
+
+  from {
+    opacity: 0;
+    filter:
+      blur(10px);
+  }
+
+  to {
+    opacity: 1;
+    filter:
+      blur(0);
+  }
+}
+
+.animate-blur-in {
+  animation:
+    blurIn 1s ease forwards;
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation:
+      none !important;
+
+    transition:
+      none !important;
+
+    scroll-behavior:
+      auto !important;
+  }
+}

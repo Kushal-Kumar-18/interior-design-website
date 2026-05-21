@@ -1,0 +1,356 @@
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.admin-bookings {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.bookings-header h1 {
+  margin-bottom: 10px;
+
+  font-size:
+    2rem;
+
+  color:
+    var(--warm-white);
+}
+
+.bookings-header p {
+  color:
+    rgba(255,255,255,0.62);
+}
+
+
+/* ============================================================
+   TOOLBAR
+   ============================================================ */
+
+.bookings-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+
+.bookings-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 340px;
+
+  padding:
+    14px 18px;
+
+  border-radius:
+    16px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.bookings-search svg {
+  color:
+    rgba(255,255,255,0.5);
+}
+
+.bookings-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color:
+    white;
+}
+
+.bookings-search input::placeholder {
+  color:
+    rgba(255,255,255,0.45);
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.bookings-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    24px;
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.booking-card {
+  padding:
+    28px;
+
+  border-radius:
+    24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  transition:
+    all 0.35s ease;
+}
+
+.booking-card:hover {
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(201,168,76,0.22);
+}
+
+
+/* ============================================================
+   TOP
+   ============================================================ */
+
+.booking-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+
+/* ============================================================
+   AVATAR
+   ============================================================ */
+
+.booking-card__avatar {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(201,168,76,0.14);
+
+  color:
+    var(--primary-gold);
+
+  font-size:
+    1.3rem;
+
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   BADGE
+   ============================================================ */
+
+.booking-badge {
+  padding:
+    8px 14px;
+
+  border-radius:
+    999px;
+
+  font-size:
+    0.8rem;
+}
+
+.booking-badge.pending {
+  background:
+    rgba(251,191,36,0.14);
+
+  color:
+    #fbbf24;
+}
+
+.booking-badge.approved {
+  background:
+    rgba(74,222,128,0.14);
+
+  color:
+    #4ade80;
+}
+
+.booking-badge.rejected {
+  background:
+    rgba(248,113,113,0.14);
+
+  color:
+    #f87171;
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.booking-card__content h3 {
+  margin-bottom: 10px;
+
+  color:
+    var(--warm-white);
+}
+
+.booking-card__content h4 {
+  margin-bottom: 16px;
+
+  color:
+    rgba(255,255,255,0.72);
+
+  font-weight: 500;
+}
+
+.booking-card__content p {
+  color:
+    rgba(255,255,255,0.58);
+}
+
+
+/* ============================================================
+   DATE
+   ============================================================ */
+
+.booking-card__date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 24px;
+
+  color:
+    rgba(255,255,255,0.6);
+}
+
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.booking-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+.booking-card__actions button {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius:
+    14px;
+
+  cursor: pointer;
+
+  transition:
+    all 0.35s ease;
+}
+
+.booking-card__actions button:hover {
+  transform:
+    translateY(-4px);
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.approve-btn {
+  background:
+    rgba(74,222,128,0.14);
+
+  color:
+    #4ade80;
+}
+
+.reject-btn {
+  background:
+    rgba(248,113,113,0.14);
+
+  color:
+    #f87171;
+}
+
+.view-btn {
+  background:
+    rgba(255,255,255,0.06);
+
+  color:
+    rgba(255,255,255,0.72);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1200px) {
+
+  .bookings-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .bookings-search {
+    width: 100%;
+  }
+
+  .bookings-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .booking-card {
+    padding:
+      24px;
+  }
+}

@@ -1,0 +1,302 @@
+/* ============================================================
+   SECTION
+   ============================================================ */
+
+.before-after {
+  position: relative;
+
+  padding:
+    110px 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #111111 0%,
+      #171717 100%
+    );
+}
+
+
+/* ============================================================
+   HEADING
+   ============================================================ */
+
+.before-after__heading {
+  max-width: 860px;
+
+  margin:
+    0 auto 60px;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   WRAPPER
+   ============================================================ */
+
+.before-after__wrapper {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 960px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius:
+    30px;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  background:
+    #111;
+
+  cursor: ew-resize;
+
+  box-shadow:
+    0 28px 70px rgba(0,0,0,0.35);
+}
+
+
+/* ============================================================
+   IMAGES AREA
+   ============================================================ */
+
+.before-after__images {
+  position: relative;
+
+  width: 100%;
+
+  height:
+    clamp(240px, 34vw, 420px);
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   IMAGE
+   ============================================================ */
+
+.before-after__image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  user-select: none;
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   AFTER WRAPPER
+   ============================================================ */
+
+.before-after__after-wrapper {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  z-index: 2;
+}
+
+
+/* ============================================================
+   LABELS
+   ============================================================ */
+
+.before-after__label {
+  position: absolute;
+
+  top: 18px;
+
+  padding:
+    8px 16px;
+
+  border-radius:
+    999px;
+
+  background:
+    rgba(0,0,0,0.6);
+
+  backdrop-filter:
+    blur(10px);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color:
+    white;
+
+  font-size: 0.72rem;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  z-index: 10;
+}
+
+.before-after__label--before {
+  left: 18px;
+}
+
+.before-after__label--after {
+  right: 18px;
+}
+
+
+/* ============================================================
+   SLIDER
+   ============================================================ */
+
+.before-after__slider {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  width: 2px;
+
+  background:
+    rgba(255,255,255,0.92);
+
+  z-index: 15;
+}
+
+
+/* ============================================================
+   HANDLE
+   ============================================================ */
+
+.before-after__handle {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(15,15,15,0.88);
+
+  border:
+    2px solid rgba(255,255,255,0.14);
+
+  backdrop-filter:
+    blur(12px);
+
+  color:
+    var(--primary-gold);
+
+  font-size: 1rem;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 992px) {
+
+  .before-after {
+    padding:
+      90px 0;
+  }
+
+  .before-after__images {
+    height:
+      clamp(240px, 42vw, 360px);
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .before-after {
+    padding:
+      80px 0;
+  }
+
+  .before-after__heading {
+    margin-bottom: 45px;
+  }
+
+  .before-after__wrapper {
+    border-radius:
+      22px;
+  }
+
+  .before-after__images {
+    height:
+      300px;
+  }
+
+  .before-after__handle {
+    width: 44px;
+    height: 44px;
+
+    font-size: 0.9rem;
+  }
+
+  .before-after__label {
+    top: 14px;
+
+    padding:
+      7px 12px;
+
+    font-size: 0.66rem;
+
+    letter-spacing: 1px;
+  }
+
+  .before-after__label--before {
+    left: 14px;
+  }
+
+  .before-after__label--after {
+    right: 14px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .before-after__images {
+    height:
+      220px;
+  }
+
+  .before-after__handle {
+    width: 38px;
+    height: 38px;
+
+    font-size: 0.75rem;
+  }
+}

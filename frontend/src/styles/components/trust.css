@@ -1,0 +1,203 @@
+/* ============================================================
+   SECTION
+   ============================================================ */
+
+.trust {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #111111 0%,
+      #181818 100%
+    );
+}
+
+
+/* ============================================================
+   HEADING
+   ============================================================ */
+
+.trust__heading {
+  max-width: 860px;
+
+  margin:
+    0 auto 80px;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.trust__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap:
+    28px;
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.trust-card {
+  position: relative;
+
+  padding:
+    42px 30px;
+
+  overflow: hidden;
+
+  border-radius:
+    28px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  text-align: center;
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+/* ============================================================
+   GLOW
+   ============================================================ */
+
+.trust-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -20%;
+  right: -10%;
+
+  width: 220px;
+  height: 220px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201,168,76,0.08),
+      transparent 70%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.45s ease;
+}
+
+
+/* ============================================================
+   HOVER
+   ============================================================ */
+
+.trust-card:hover {
+  transform:
+    translateY(-10px);
+
+  border-color:
+    rgba(201,168,76,0.24);
+
+  box-shadow:
+    0 24px 60px rgba(0,0,0,0.3);
+}
+
+.trust-card:hover::before {
+  opacity: 1;
+}
+
+
+/* ============================================================
+   VALUE
+   ============================================================ */
+
+.trust-card__value {
+  margin-bottom: 20px;
+
+  font-size:
+    clamp(2.5rem, 4vw, 4rem);
+
+  font-weight: 300;
+
+  line-height: 1;
+
+  color:
+    var(--primary-gold);
+}
+
+
+/* ============================================================
+   LABEL
+   ============================================================ */
+
+.trust-card__label {
+  margin-top: 22px;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  color:
+    rgba(255,255,255,0.72);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+  .trust__grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .trust__heading {
+    margin-bottom: 60px;
+  }
+
+  .trust-card {
+    padding:
+      36px 24px;
+  }
+}
+
+
+@media (max-width: 540px) {
+
+  .trust__grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .trust-card__value {
+    font-size:
+      3rem;
+  }
+}

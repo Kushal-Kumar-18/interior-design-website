@@ -1,0 +1,242 @@
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  position: relative;
+
+  padding:
+    110px 0 40px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #0c0c0c 0%,
+      #050505 100%
+    );
+
+  border-top:
+    1px solid rgba(255,255,255,0.06);
+}
+
+
+/* ============================================================
+   TOP
+   ============================================================ */
+
+.footer__top {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr 1fr 1fr 1fr;
+
+  gap:
+    60px;
+
+  padding-bottom:
+    70px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+
+/* ============================================================
+   BRAND
+   ============================================================ */
+
+.footer__brand {
+  max-width: 420px;
+}
+
+.footer__logo {
+  display: inline-block;
+
+  margin-bottom: 26px;
+
+  color:
+    var(--primary-gold);
+
+  font-size:
+    2rem;
+
+  letter-spacing: 3px;
+
+  text-decoration: none;
+}
+
+.footer__description {
+  margin-bottom: 28px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(255,255,255,0.68);
+}
+
+
+/* ============================================================
+   SOCIALS
+   ============================================================ */
+
+.footer__socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__socials a {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color:
+    var(--warm-white);
+
+  font-size: 1rem;
+
+  transition:
+    all 0.35s ease;
+}
+
+.footer__socials a:hover {
+  transform:
+    translateY(-5px);
+
+  color:
+    #111;
+
+  background:
+    var(--primary-gold);
+
+  border-color:
+    var(--primary-gold);
+}
+
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+
+.footer__links h4,
+.footer__contact h4 {
+  margin-bottom: 24px;
+
+  color:
+    var(--warm-white);
+
+  font-size:
+    1.1rem;
+}
+
+.footer__links,
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__links a,
+.footer__links span,
+.footer__contact a,
+.footer__contact p {
+  margin-bottom: 14px;
+
+  color:
+    rgba(255,255,255,0.68);
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease;
+}
+
+.footer__links a:hover,
+.footer__contact a:hover {
+  color:
+    var(--primary-gold);
+}
+
+
+/* ============================================================
+   BOTTOM
+   ============================================================ */
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-top:
+    30px;
+}
+
+.footer__bottom p,
+.footer__bottom span {
+  color:
+    rgba(255,255,255,0.5);
+
+  font-size:
+    0.9rem;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+  .footer__top {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding:
+      90px 0 34px;
+  }
+
+  .footer__top {
+    gap:
+      40px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 540px) {
+
+  .footer__top {
+    grid-template-columns:
+      1fr;
+  }
+
+  .footer__logo {
+    font-size:
+      1.7rem;
+  }
+}

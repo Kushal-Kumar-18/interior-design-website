@@ -1,0 +1,173 @@
+/* ============================================================
+   SECTION
+   ============================================================ */
+
+.error-boundary {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #181818 0%,
+      #0D0D0D 100%
+    );
+}
+
+
+/* ============================================================
+   GLOW
+   ============================================================ */
+
+.error-boundary__glow {
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201,168,76,0.12),
+      transparent 70%
+    );
+
+  animation:
+    errorGlow 4s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.error-boundary__content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 680px;
+
+  padding:
+    clamp(40px, 6vw, 60px);
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   ERROR CODE
+   ============================================================ */
+
+.error-boundary__code {
+  margin-bottom: 24px;
+
+  color:
+    rgba(201,168,76,0.18);
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(5rem, 12vw, 9rem);
+
+  font-weight: 300;
+
+  line-height: 1;
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.error-boundary__title {
+  margin-bottom: 20px;
+
+  color:
+    var(--warm-white);
+
+  line-height: 1.1;
+}
+
+
+/* ============================================================
+   DESCRIPTION
+   ============================================================ */
+
+.error-boundary__description {
+  max-width: 580px;
+
+  margin:
+    0 auto 38px;
+
+  color:
+    rgba(250,248,245,0.68);
+
+  line-height: 1.9;
+}
+
+
+/* ============================================================
+   GLOW ANIMATION
+   ============================================================ */
+
+@keyframes errorGlow {
+
+  0%,
+  100% {
+    transform:
+      scale(1);
+
+    opacity: 0.5;
+  }
+
+  50% {
+    transform:
+      scale(1.12);
+
+    opacity: 1;
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .error-boundary__content {
+    padding:
+      36px 24px;
+  }
+
+  .error-boundary__description {
+    margin-bottom: 32px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .error-boundary__content {
+    padding:
+      32px 20px;
+  }
+
+  .error-boundary__title {
+    font-size:
+      clamp(2rem, 8vw, 3rem);
+  }
+
+  .error-boundary__description {
+    font-size: 0.95rem;
+  }
+}
