@@ -1,0 +1,47 @@
+# dependencies
+node_modules/
+
+# production build
+dist/
+build/
+
+# environment variables
+.env
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# SQLite database
+*.db
+*.sqlite3
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# temporary files
+*.tmp
+
+# coverage
+coverage/
+
+# React cache
+.cache/
+
+# virtual environment
+venv/
+env/
+
+# IDE files
+.idea/
